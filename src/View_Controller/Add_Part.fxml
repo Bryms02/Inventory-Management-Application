@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.Add_PartController">
+   <children>
+      <Label layoutX="54.0" layoutY="42.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <RadioButton fx:id="inhouseRadio" layoutX="212.0" layoutY="47.0" mnemonicParsing="false" onAction="#inHouseOrOutsource" text="In-House" />
+      <RadioButton fx:id="outsourceRadio" layoutX="341.0" layoutY="47.0" mnemonicParsing="false" onAction="#inHouseOrOutsource" text="Outsourced" />
+      <VBox layoutX="92.0" layoutY="141.0" prefHeight="211.0" prefWidth="100.0" spacing="22.0">
+         <children>
+            <Label text="ID" />
+            <Label text="Name" />
+            <Label text="Inv" />
+            <Label layoutX="10.0" layoutY="51.0" text="Price/Cost" />
+            <Label text="Max" />
+            <Label fx:id="machineIdLabel" text="Machine ID" />
+         </children>
+      </VBox>
+      <VBox layoutX="197.0" layoutY="132.0" prefHeight="228.0" prefWidth="122.0" spacing="15.0">
+         <children>
+            <TextField fx:id="partIdTextField" />
+            <TextField fx:id="partNameTextField" layoutX="10.0" layoutY="10.0" />
+            <TextField fx:id="partInvTextField" layoutX="10.0" layoutY="35.0" />
+            <TextField fx:id="partPriceTextField" layoutX="10.0" layoutY="60.0" />
+            <TextField fx:id="partMaxTextField" layoutX="10.0" layoutY="85.0" />
+            <TextField fx:id="specialTextField" prefHeight="25.0" prefWidth="122.0" />
+         </children>
+      </VBox>
+      <TextField fx:id="partMinTextField" layoutX="402.0" layoutY="292.0" prefHeight="25.0" prefWidth="108.0" />
+      <Label layoutX="360.0" layoutY="296.0" text="Min" />
+      <Button layoutX="262.0" layoutY="403.0" mnemonicParsing="false" onAction="#savePart" text="Save" />
+      <Button layoutX="334.0" layoutY="403.0" mnemonicParsing="false" onAction="#cancelScreenButtonPushed" text="Cancel" />
+      <Label fx:id="companyNameLabel" layoutX="92.0" layoutY="336.0" text="Company Name" />
+   </children>
+</AnchorPane>

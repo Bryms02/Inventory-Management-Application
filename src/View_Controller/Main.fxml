@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="521.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View_Controller.MainController">
+    <children>
+      <Label layoutX="65.0" layoutY="42.0" text="Inventory Management System">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="330.0" layoutX="64.0" layoutY="115.0" stroke="BLACK" strokeType="INSIDE" width="491.0" />
+      <VBox layoutX="95.0" layoutY="192.0" prefHeight="187.0" prefWidth="429.0" spacing="20.0">
+         <children>
+            <TableView fx:id="tableViewParts" prefHeight="177.0" prefWidth="429.0">
+              <columns>
+                <TableColumn fx:id="tableView_Id" prefWidth="67.0" text="Part ID" />
+                <TableColumn fx:id="tableView_Name" prefWidth="90.0" text="Part Name" />
+                  <TableColumn fx:id="tableView_Inv" prefWidth="153.0" text="Inventory Level" />
+                  <TableColumn fx:id="tableView_Price" prefWidth="117.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <Button fx:id="button1" layoutX="344.0" layoutY="394.0" onAction="#modifyScreenButtonPushed" text="Modify">
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button fx:id="button11" layoutX="451.0" layoutY="394.0" onAction="#deleteButtonPushed" text="Delete">
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+         </padding>
+      </Button>
+      <TextField fx:id="searchField" layoutX="337.0" layoutY="149.0" prefHeight="25.0" prefWidth="189.0" promptText="Search by Part ID or Name" />
+      <Label layoutX="95.0" layoutY="148.0" text="Parts">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="20.0" arcWidth="20.0" fill="#1f93ff00" height="330.0" layoutX="636.0" layoutY="115.0" stroke="BLACK" strokeType="INSIDE" width="491.0" />
+      <VBox layoutX="667.0" layoutY="192.0" prefHeight="187.0" prefWidth="429.0" spacing="20.0">
+         <children>
+            <TableView fx:id="tableViewProducts" prefHeight="177.0" prefWidth="429.0">
+               <columns>
+                  <TableColumn fx:id="tableViewProduct_Id" prefWidth="84.0" text="Product ID" />
+                  <TableColumn fx:id="tableViewProduct_Name" prefWidth="108.0" text="Product Name" />
+                  <TableColumn fx:id="tableViewProduct_Inv" prefWidth="118.0" text="Inventory Level" />
+                  <TableColumn fx:id="tableViewProduct_Price" prefWidth="117.0" text="Price/Cost per Unit" />
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+      <Button fx:id="button2" layoutX="848.0" layoutY="394.0" onAction="#addProductScreenButtonPushed" text="Add">
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button fx:id="button12" layoutX="916.0" layoutY="394.0" onAction="#modifyProductScreenButtonPushed" text="Modify">
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button fx:id="button111" layoutX="1023.0" layoutY="394.0" onAction="#deleteProductButtonPushed" text="Delete">
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+         </padding>
+      </Button>
+      <TextField fx:id="productSearchField" layoutX="909.0" layoutY="149.0" prefHeight="25.0" prefWidth="189.0" promptText="Search by Product ID or Name" />
+      <Label layoutX="667.0" layoutY="148.0" text="Products">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="button21" layoutX="1031.0" layoutY="465.0" onAction="#exitButtonPushed" text="Exit">
+         <padding>
+            <Insets bottom="5.0" left="15.0" right="15.0" top="5.0" />
+         </padding>
+      </Button>
+      <Button layoutX="291.0" layoutY="395.0" mnemonicParsing="false" onAction="#changeScreenButtonPushed" text="Add" />
+      <Button layoutX="265.0" layoutY="149.0" mnemonicParsing="false" onAction="#searchButtonPushed" text="Search" />
+      <Button layoutX="841.0" layoutY="149.0" mnemonicParsing="false" onAction="#searchProductButtonPushed" text="Search" />
+    </children>
+</AnchorPane>
